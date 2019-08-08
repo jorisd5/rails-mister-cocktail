@@ -1,0 +1,13 @@
+<div class="list-group w-50 mx-auto">
+  <a href="#" class="list-group-item list-group-item-action active text-center">
+    Cocktails
+  </a>
+<% @cocktails.each do |cocktail| %>
+<!-- <a href="" class="list-group-item list-group-item-action"><%= cocktail.name %></a> -->
+<%= link_to cocktail.name, cocktail_path(cocktail), class: "list-group-item list-group-item-action" %>
+
+<% end %>
+<%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-primary w-50 mx-auto m-2" %>
+
+</div>
+
