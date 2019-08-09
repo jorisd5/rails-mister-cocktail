@@ -11,20 +11,19 @@
     </tr>
   </thead>
   <tbody>
-  <% @ingredients.each do |ingredient| %>
-    <% ingredient.doses.each do |dose| %>
     <tr>
-      <td>
-          <%= ingredient.name %>
-      </td>
-      <td>
-          <%= dose.description %>
-      </td>
-      <td>
-          <%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %>
-      </td>
+      <% @cocktail.doses.each do |dose| %>
+    <td>
+      <%= dose.ingredient.name %>
+    </td>
+    <td>
+      <%= dose.description %>
+    </td>
+    <td>
+      <%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %>
+    </td>
     </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>
+

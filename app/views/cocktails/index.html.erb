@@ -1,13 +1,15 @@
-<div class="list-group w-50 mx-auto">
-  <a href="#" class="list-group-item list-group-item-action active text-center">
-    Cocktails
-  </a>
+<h1 class = text-center>Cocktails</h1>
+
+<div class="cards m-3">
+
 <% @cocktails.each do |cocktail| %>
-<!-- <a href="" class="list-group-item list-group-item-action"><%= cocktail.name %></a> -->
-<%= link_to cocktail.name, cocktail_path(cocktail), class: "list-group-item list-group-item-action" %>
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <span><%= link_to cocktail.name, cocktail_path(cocktail) %></span>
+</div>
 
 <% end %>
-<%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-primary w-50 mx-auto m-2" %>
 
 </div>
+
 

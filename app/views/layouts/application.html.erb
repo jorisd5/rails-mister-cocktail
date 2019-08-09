@@ -12,6 +12,15 @@
   </head>
 
   <body>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner.jpg" %>');">
+
+    <div class="container">
+    <h1>Brussels Tonic</h1>
+    <p>Discover a new taste</p>
+    <%= link_to "Create a drink", new_cocktail_path, class: "btn btn-success" %>
+  </div>
+</div>
+
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
