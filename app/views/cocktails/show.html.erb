@@ -1,7 +1,10 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col"><%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></th>
+      <th scope="col">
+        <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+        <%= link_to "Back to list", cocktails_path(@cocktail), class: "btn btn-primary" %>
+      </th>
       <th scope="col"><%= @cocktail.name %></th>
     </tr>
     <tr>
